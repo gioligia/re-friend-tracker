@@ -91,6 +91,14 @@ export class GuiModel {
                             "required": true
                         },
                         {
+                          "id":"comments",
+                          "type":"text",
+                          "name":"Comments",
+                          "width":2,
+                          "height": 4,
+                          "maxLength": 5000,
+                        },
+                        {
                             "type": "deleteButton",
                             "name": "Delete"
                         },
@@ -146,6 +154,14 @@ export class GuiModel {
                       "required":true
                     },
                     {
+                      "id":"comments",
+                      "type":"text",
+                      "name":"Comments",
+                      "width":2,
+                      "height": 4,
+                      "maxLength": 5000,
+                    },
+                    {
                       "type":"deleteButton",
                       "name":"Delete",
                     },
@@ -194,7 +210,7 @@ export class GuiModel {
                         {
                             "type": "button",
                             "name": "Friends",
-                            "icon": "fa-user",
+                            "icon": "fa-address-book",
                             "color": "blue",
                             "page": "friendspage",
                         },
@@ -215,7 +231,7 @@ export class GuiModel {
                         {
                           "type":"button",
                           "name":"Activities",
-                          "icon":"fa-weixin",
+                          "icon":"fa-beer",
                           "color":"wisteria",
                           "page":"activitiespage"
                         },
@@ -308,7 +324,7 @@ export class GuiModel {
                     {
                       "type":"newButton",
                       "name":"NewActivity",
-                      "icon":"fa-weixin",
+                      "icon":"fa-beer",
                       "color":"green",
                       "form":{
                         "form":"ActivityForm"
@@ -316,7 +332,7 @@ export class GuiModel {
                     },
                     {
                       "type":"list",
-                      "icon":"fa-weixin",
+                      "icon":"fa-beer",
                       "color":"wisteria",
                       "search":true,
                       "url":"/activity",
@@ -371,8 +387,9 @@ export class GuiModel {
                       "name":"EditLocation",
                       "icon":"fa-weixin",
                       "color":"green",
+                      "url":"/location",
                       "form":{
-                        "form":"EditLocation"
+                        "form":"LocationForm"
                       }
                     },
                     {
@@ -380,6 +397,7 @@ export class GuiModel {
                       "name":"AddActivity",
                       "icon":"fa-weixin",
                       "color":"green",
+                      "url":"/location/:locationKey/activity",
                       "form":{
                         "form":"AddActivityForm"
                       }
